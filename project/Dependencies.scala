@@ -8,7 +8,7 @@ object Dependencies {
 
   def nightlyVersion: Option[String] = sys.props.get("sbt.build.version")
 
-  private val ioVersion = nightlyVersion.getOrElse("1.3.0")
+  private val ioVersion = nightlyVersion.getOrElse("1.3.1")
   private val sbtIO = "org.scala-sbt" %% "io" % ioVersion
 
   def getSbtModulePath(key: String, name: String) = {
@@ -40,7 +40,7 @@ object Dependencies {
   val scalaCompiler = Def.setting { "org.scala-lang" % "scala-compiler" % scalaVersion.value }
   val scalaReflect = Def.setting { "org.scala-lang" % "scala-reflect" % scalaVersion.value }
 
-  val scalaCheck = "org.scalacheck" %% "scalacheck" % "1.14.0" % Test
+  val scalaCheck = "org.scalacheck" %% "scalacheck" % "1.14.1" % Test
   val scalaTest  = "org.scalatest"  %% "scalatest"  % "3.0.8" % Test
   val parserCombinator = "org.scala-lang.modules" %% "scala-parser-combinators" % "1.1.2"
 
@@ -54,7 +54,7 @@ object Dependencies {
     "com.eed3si9n" %% "sjson-new-murmurhash" % contrabandSjsonNewVersion.value
   }
 
-  def log4jVersion = "2.11.2"
+  def log4jVersion = "2.12.1"
   val log4jApi = "org.apache.logging.log4j" % "log4j-api" % log4jVersion
   val log4jCore = "org.apache.logging.log4j" % "log4j-core" % log4jVersion
   val disruptor = "com.lmax" % "disruptor" % "3.4.2"

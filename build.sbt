@@ -2,7 +2,7 @@ import Dependencies._
 import Util._
 import com.typesafe.tools.mima.core._, ProblemFilters._
 
-ThisBuild / git.baseVersion := "1.3.0"
+ThisBuild / git.baseVersion := "1.3.1"
 ThisBuild / version := {
   val old = (ThisBuild / version).value
   nightlyVersion match {
